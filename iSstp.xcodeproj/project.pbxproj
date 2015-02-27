@@ -7,14 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53013D631A9E89FC00C5D631 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 534F321B1A9E402C001B7745 /* logo.png */; };
+		53013D681A9E8B9D00C5D631 /* statusbar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 53013D661A9E8B8E00C5D631 /* statusbar_icon.png */; };
+		532828DD1A9EB92B00137DB7 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = 532828DC1A9EB8F500137DB7 /* install.sh */; };
+		5347C40B1A9EA47200B77B5B /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5347C40A1A9EA47200B77B5B /* WindowController.swift */; };
+		534BC1A91A9EB42F00D34B85 /* helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 5347C4131A9EAA1D00B77B5B /* helper.c */; };
+		534F32221A9E47F9001B7745 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534F32211A9E47F9001B7745 /* Account.swift */; };
+		534F325C1A9E6A9D001B7745 /* sstpc in Resources */ = {isa = PBXBuildFile; fileRef = 534F324E1A9E6A9D001B7745 /* sstpc */; };
+		534F32711A9E74E8001B7745 /* libcrypto.1.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32611A9E6C50001B7745 /* libcrypto.1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		534F32721A9E74EA001B7745 /* libevent-2.0.5.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32621A9E6C50001B7745 /* libevent-2.0.5.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		534F32731A9E74EC001B7745 /* libssl.1.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32631A9E6C50001B7745 /* libssl.1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		534F32741A9E74F0001B7745 /* libz.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32641A9E6C50001B7745 /* libz.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		534F32751A9E74F3001B7745 /* libsstp_api-0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32471A9E6A9D001B7745 /* libsstp_api-0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		534F32781A9E7A10001B7745 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A358351A9E3B4400A2185E /* Main.storyboard */; };
+		534F32861A9E7F86001B7745 /* helper in Resources */ = {isa = PBXBuildFile; fileRef = 534F327E1A9E7F65001B7745 /* helper */; };
+		534F32971A9E8866001B7745 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534F32961A9E8866001B7745 /* AppKit.framework */; };
 		53A358301A9E3B4400A2185E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A3582F1A9E3B4400A2185E /* AppDelegate.swift */; };
 		53A358321A9E3B4400A2185E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A358311A9E3B4400A2185E /* ViewController.swift */; };
 		53A358341A9E3B4400A2185E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A358331A9E3B4400A2185E /* Images.xcassets */; };
-		53A358371A9E3B4400A2185E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A358351A9E3B4400A2185E /* Main.storyboard */; };
 		53A358431A9E3B4400A2185E /* iSstpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A358421A9E3B4400A2185E /* iSstpTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		534F32981A9E88A0001B7745 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53A358221A9E3B4400A2185E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 534F327D1A9E7F65001B7745;
+			remoteInfo = helper;
+		};
 		53A3583D1A9E3B4400A2185E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 53A358221A9E3B4400A2185E /* Project object */;
@@ -24,7 +45,48 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		534F32701A9E74D6001B7745 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				534F32711A9E74E8001B7745 /* libcrypto.1.0.0.dylib in CopyFiles */,
+				534F32721A9E74EA001B7745 /* libevent-2.0.5.dylib in CopyFiles */,
+				534F32731A9E74EC001B7745 /* libssl.1.0.0.dylib in CopyFiles */,
+				534F32741A9E74F0001B7745 /* libz.1.dylib in CopyFiles */,
+				534F32751A9E74F3001B7745 /* libsstp_api-0.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		534F327C1A9E7F65001B7745 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		53013D661A9E8B8E00C5D631 /* statusbar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = statusbar_icon.png; path = iSstp/statusbar_icon.png; sourceTree = SOURCE_ROOT; };
+		532828DC1A9EB8F500137DB7 /* install.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		5347C40A1A9EA47200B77B5B /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		5347C4131A9EAA1D00B77B5B /* helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = helper.c; path = iSstp/helper.c; sourceTree = SOURCE_ROOT; };
+		534F321B1A9E402C001B7745 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		534F32211A9E47F9001B7745 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		534F32471A9E6A9D001B7745 /* libsstp_api-0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libsstp_api-0.dylib"; sourceTree = "<group>"; };
+		534F324E1A9E6A9D001B7745 /* sstpc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sstpc; sourceTree = "<group>"; };
+		534F32611A9E6C50001B7745 /* libcrypto.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.1.0.0.dylib; sourceTree = "<group>"; };
+		534F32621A9E6C50001B7745 /* libevent-2.0.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libevent-2.0.5.dylib"; sourceTree = "<group>"; };
+		534F32631A9E6C50001B7745 /* libssl.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.1.0.0.dylib; sourceTree = "<group>"; };
+		534F32641A9E6C50001B7745 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libz.1.dylib; sourceTree = "<group>"; };
+		534F32761A9E7887001B7745 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		534F327E1A9E7F65001B7745 /* helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		534F32961A9E8866001B7745 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		53A3582A1A9E3B4400A2185E /* iSstp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSstp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A3582E1A9E3B4400A2185E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53A3582F1A9E3B4400A2185E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,10 +99,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		534F327B1A9E7F65001B7745 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53A358271A9E3B4400A2185E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				534F32971A9E8866001B7745 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,11 +124,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		534F32231A9E59D9001B7745 /* sstp-client */ = {
+			isa = PBXGroup;
+			children = (
+				534F32461A9E6A9D001B7745 /* lib */,
+				534F324D1A9E6A9D001B7745 /* sbin */,
+				534F32761A9E7887001B7745 /* README */,
+				532828DC1A9EB8F500137DB7 /* install.sh */,
+			);
+			name = "sstp-client";
+			sourceTree = "<group>";
+		};
+		534F32461A9E6A9D001B7745 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				534F32611A9E6C50001B7745 /* libcrypto.1.0.0.dylib */,
+				534F32621A9E6C50001B7745 /* libevent-2.0.5.dylib */,
+				534F32631A9E6C50001B7745 /* libssl.1.0.0.dylib */,
+				534F32641A9E6C50001B7745 /* libz.1.dylib */,
+				534F32471A9E6A9D001B7745 /* libsstp_api-0.dylib */,
+			);
+			name = lib;
+			path = "sstp-client/lib";
+			sourceTree = "<group>";
+		};
+		534F324D1A9E6A9D001B7745 /* sbin */ = {
+			isa = PBXGroup;
+			children = (
+				534F324E1A9E6A9D001B7745 /* sstpc */,
+			);
+			name = sbin;
+			path = "sstp-client/sbin";
+			sourceTree = "<group>";
+		};
+		534F327F1A9E7F65001B7745 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				5347C4131A9EAA1D00B77B5B /* helper.c */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
 		53A358211A9E3B4400A2185E = {
 			isa = PBXGroup;
 			children = (
 				53A3582C1A9E3B4400A2185E /* iSstp */,
 				53A3583F1A9E3B4400A2185E /* iSstpTests */,
+				534F327F1A9E7F65001B7745 /* helper */,
 				53A3582B1A9E3B4400A2185E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +180,7 @@
 			children = (
 				53A3582A1A9E3B4400A2185E /* iSstp.app */,
 				53A3583C1A9E3B4400A2185E /* iSstpTests.xctest */,
+				534F327E1A9E7F65001B7745 /* helper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,7 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				53A3582F1A9E3B4400A2185E /* AppDelegate.swift */,
+				5347C40A1A9EA47200B77B5B /* WindowController.swift */,
 				53A358311A9E3B4400A2185E /* ViewController.swift */,
+				534F32211A9E47F9001B7745 /* Account.swift */,
 				53A358331A9E3B4400A2185E /* Images.xcassets */,
 				53A358351A9E3B4400A2185E /* Main.storyboard */,
 				53A3582D1A9E3B4400A2185E /* Supporting Files */,
@@ -87,6 +202,7 @@
 		53A3582D1A9E3B4400A2185E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				534F32231A9E59D9001B7745 /* sstp-client */,
 				53A3582E1A9E3B4400A2185E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -104,6 +220,9 @@
 		53A358401A9E3B4400A2185E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				53013D661A9E8B8E00C5D631 /* statusbar_icon.png */,
+				534F32961A9E8866001B7745 /* AppKit.framework */,
+				534F321B1A9E402C001B7745 /* logo.png */,
 				53A358411A9E3B4400A2185E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -112,6 +231,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		534F327D1A9E7F65001B7745 /* helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 534F32821A9E7F65001B7745 /* Build configuration list for PBXNativeTarget "helper" */;
+			buildPhases = (
+				534F327A1A9E7F65001B7745 /* Sources */,
+				534F327B1A9E7F65001B7745 /* Frameworks */,
+				534F327C1A9E7F65001B7745 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = helper;
+			productName = helper;
+			productReference = 534F327E1A9E7F65001B7745 /* helper */;
+			productType = "com.apple.product-type.tool";
+		};
 		53A358291A9E3B4400A2185E /* iSstp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53A358461A9E3B4400A2185E /* Build configuration list for PBXNativeTarget "iSstp" */;
@@ -119,10 +255,12 @@
 				53A358261A9E3B4400A2185E /* Sources */,
 				53A358271A9E3B4400A2185E /* Frameworks */,
 				53A358281A9E3B4400A2185E /* Resources */,
+				534F32701A9E74D6001B7745 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				534F32991A9E88A0001B7745 /* PBXTargetDependency */,
 			);
 			name = iSstp;
 			productName = iSstp;
@@ -156,6 +294,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = axot;
 				TargetAttributes = {
+					534F327D1A9E7F65001B7745 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 					53A358291A9E3B4400A2185E = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -179,6 +320,7 @@
 			projectRoot = "";
 			targets = (
 				53A358291A9E3B4400A2185E /* iSstp */,
+				534F327D1A9E7F65001B7745 /* helper */,
 				53A3583B1A9E3B4400A2185E /* iSstpTests */,
 			);
 		};
@@ -190,7 +332,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				53A358341A9E3B4400A2185E /* Images.xcassets in Resources */,
-				53A358371A9E3B4400A2185E /* Main.storyboard in Resources */,
+				534F325C1A9E6A9D001B7745 /* sstpc in Resources */,
+				534F32861A9E7F86001B7745 /* helper in Resources */,
+				53013D631A9E89FC00C5D631 /* logo.png in Resources */,
+				53013D681A9E8B9D00C5D631 /* statusbar_icon.png in Resources */,
+				534F32781A9E7A10001B7745 /* Main.storyboard in Resources */,
+				532828DD1A9EB92B00137DB7 /* install.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,12 +351,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		534F327A1A9E7F65001B7745 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534BC1A91A9EB42F00D34B85 /* helper.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53A358261A9E3B4400A2185E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				53A358321A9E3B4400A2185E /* ViewController.swift in Sources */,
+				5347C40B1A9EA47200B77B5B /* WindowController.swift in Sources */,
 				53A358301A9E3B4400A2185E /* AppDelegate.swift in Sources */,
+				534F32221A9E47F9001B7745 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +381,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		534F32991A9E88A0001B7745 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 534F327D1A9E7F65001B7745 /* helper */;
+			targetProxy = 534F32981A9E88A0001B7745 /* PBXContainerItemProxy */;
+		};
 		53A3583E1A9E3B4400A2185E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 53A358291A9E3B4400A2185E /* iSstp */;
@@ -243,6 +405,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		534F32831A9E7F65001B7745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		534F32841A9E7F65001B7745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		53A358441A9E3B4400A2185E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,6 +507,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = iSstp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSstp/sstp/1.0.9/lib",
+					"$(PROJECT_DIR)/iSstp/sstp-client/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -338,6 +523,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = iSstp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSstp/sstp/1.0.9/lib",
+					"$(PROJECT_DIR)/iSstp/sstp-client/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -381,6 +571,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		534F32821A9E7F65001B7745 /* Build configuration list for PBXNativeTarget "helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				534F32831A9E7F65001B7745 /* Debug */,
+				534F32841A9E7F65001B7745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		53A358251A9E3B4400A2185E /* Build configuration list for PBXProject "iSstp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -397,6 +596,7 @@
 				53A358481A9E3B4400A2185E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53A358491A9E3B4400A2185E /* Build configuration list for PBXNativeTarget "iSstpTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +605,7 @@
 				53A3584B1A9E3B4400A2185E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
