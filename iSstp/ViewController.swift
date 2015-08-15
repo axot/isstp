@@ -10,10 +10,14 @@ import Cocoa
 import AppKit
 import Foundation
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTableViewDelegate {
   
   @IBOutlet dynamic var status: NSTextField!
-  @IBOutlet dynamic var myArraryC : NSArrayController!
+  @IBOutlet weak var tableView: NSTableView!
+  @IBOutlet var arrayController: NSArrayController!
+  @IBOutlet weak var deleteBtn: NSButton!
+  @IBOutlet weak var editBtn: NSButton!
+  @IBOutlet weak var connectBtn: NSButton!
   
   dynamic var accounts : [Account] = []
   let ud = NSUserDefaults.standardUserDefaults()
@@ -24,16 +28,21 @@ class ViewController: NSViewController {
     status.stringValue = "Not Connected!"
     if let data = ud.objectForKey("accounts") as? NSData {
       let unarc = NSKeyedUnarchiver(forReadingWithData: data)
-      accounts = unarc.decodeObjectForKey("root") as [Account]
+      accounts = unarc.decodeObjectForKey("root") as! [Account]
     }
+    
+    tableView.setDelegate(self)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("stop:"), name: "All Stop", object: nil)
+    
+    let notif : NSNotification = NSNotification(name: "init", object:self)
+    tableViewSelectionDidChange(notif)
   }
   
   func sstpStatus(){
     let result: NSString = runCommand("/sbin/ifconfig ppp0 | grep 'inet' | awk '{ print $2}'")
     
     if result.rangeOfString("ppp0").length == 0 && result.length != 0{
-      status.stringValue = "Connected to server, your ip is: " + result
+      status.stringValue = "Connected to server, your ip is: " + (result as String)
     }
   }
   
@@ -43,7 +52,7 @@ class ViewController: NSViewController {
   }
   
   @IBAction func connect(sender: AnyObject) {
-    let ac = accounts[myArraryC.selectionIndex]
+    let ac = accounts[arrayController.selectionIndex]
     
     let qualityOfServiceClass = QOS_CLASS_BACKGROUND
     let backgroundQueue = dispatch_get_global_queue(qualityOfServiceClass, 0)
@@ -62,6 +71,7 @@ class ViewController: NSViewController {
       task.arguments.append(ac.user!)
       task.arguments.append(ac.pass!)
       task.arguments.append(ac.server!)
+      task.arguments.append(ac.option!)
       task.arguments.reverse()
       
       let pipe = NSPipe()
@@ -69,7 +79,7 @@ class ViewController: NSViewController {
       task.launch()
       
       let data = pipe.fileHandleForReading.readDataToEndOfFile()
-      let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)!
+      let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
       
       print(output)
     })
@@ -101,7 +111,7 @@ class ViewController: NSViewController {
       task.launch()
       
       let data = pipe.fileHandleForReading.readDataToEndOfFile()
-      let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)!
+      let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
       
       print(output)
     })
@@ -128,7 +138,34 @@ class ViewController: NSViewController {
     task.standardOutput = pipe
     task.launch()
     let data = pipe.fileHandleForReading.readDataToEndOfFile()
-    let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)!
-    return output;
+    let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
+    return output
+  }
+  
+  @IBAction func deleteBtnPressed(sender: AnyObject) {
+    arrayController.remove(sender);
+    let notif : NSNotification = NSNotification(name: "delete", object:self)
+    tableViewSelectionDidChange(notif)
+  }
+  
+  func tableViewSelectionDidChange(notification: NSNotification){
+    if (arrayController.selectionIndexes.count != 1){
+      connectBtn.enabled = false
+      editBtn.enabled = false
+      deleteBtn.enabled = false
+      return
+    }
+    connectBtn.enabled = true
+    editBtn.enabled = true
+    deleteBtn.enabled = true
+  }
+  
+  override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject!) {
+    if (segue.identifier == "Advanced Options") {
+      let optionViewController = segue.destinationController as! OptionViewController
+      
+      optionViewController.account = accounts[arrayController.selectionIndex]
+      optionViewController.superViewController = self
+    }
   }
 }

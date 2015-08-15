@@ -14,21 +14,34 @@ class Account: NSObject {
   var user : String? = "Username"
   var pass : String? = "Password"
   var server : String? = "Server Name"
-  
-  override init() {}
+  var option : String?
+  var defaultOption : String? = "usepeerdns require-mschap-v2 refuse-eap noauth noipdefault defaultroute"
+
+  override init() {
+    option = defaultOption
+  }
   
   required init(coder aDecoder: NSCoder) {
     if let ret = aDecoder.decodeObjectForKey("display") as? String {
       self.display = ret
     }
+    
     if let ret = aDecoder.decodeObjectForKey("user") as? String {
       self.user = ret
     }
+    
     if let ret = aDecoder.decodeObjectForKey("pass") as? String {
       self.pass = ret
     }
+    
     if let ret = aDecoder.decodeObjectForKey("server") as? String {
       self.server = ret
+    }
+    
+    if let ret = aDecoder.decodeObjectForKey("option") as? String {
+      self.option = ret
+    }else{
+      self.option = defaultOption
     }
   }
   
@@ -48,7 +61,9 @@ class Account: NSObject {
     if let ret = self.server {
       aCoder.encodeObject(ret, forKey: "server")
     }
-
+    
+    if let ret = self.option {
+      aCoder.encodeObject(ret, forKey: "option")
+    }
   }
-
 }

@@ -10,6 +10,7 @@
 		53013D631A9E89FC00C5D631 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 534F321B1A9E402C001B7745 /* logo.png */; };
 		53013D681A9E8B9D00C5D631 /* statusbar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 53013D661A9E8B8E00C5D631 /* statusbar_icon.png */; };
 		532828DD1A9EB92B00137DB7 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = 532828DC1A9EB8F500137DB7 /* install.sh */; };
+		53381B1D1B7ED29F00B03F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A358351A9E3B4400A2185E /* Main.storyboard */; };
 		5347C40B1A9EA47200B77B5B /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5347C40A1A9EA47200B77B5B /* WindowController.swift */; };
 		534BC1A91A9EB42F00D34B85 /* helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 5347C4131A9EAA1D00B77B5B /* helper.c */; };
 		534F32221A9E47F9001B7745 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534F32211A9E47F9001B7745 /* Account.swift */; };
@@ -19,9 +20,9 @@
 		534F32731A9E74EC001B7745 /* libssl.1.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32631A9E6C50001B7745 /* libssl.1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		534F32741A9E74F0001B7745 /* libz.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32641A9E6C50001B7745 /* libz.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		534F32751A9E74F3001B7745 /* libsstp_api-0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32471A9E6A9D001B7745 /* libsstp_api-0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		534F32781A9E7A10001B7745 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A358351A9E3B4400A2185E /* Main.storyboard */; };
 		534F32861A9E7F86001B7745 /* helper in Resources */ = {isa = PBXBuildFile; fileRef = 534F327E1A9E7F65001B7745 /* helper */; };
 		534F32971A9E8866001B7745 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534F32961A9E8866001B7745 /* AppKit.framework */; };
+		536468011B7F602F00200D54 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536467FF1B7F419B00200D54 /* OptionViewController.swift */; };
 		53A358301A9E3B4400A2185E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A3582F1A9E3B4400A2185E /* AppDelegate.swift */; };
 		53A358321A9E3B4400A2185E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A358311A9E3B4400A2185E /* ViewController.swift */; };
 		53A358341A9E3B4400A2185E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A358331A9E3B4400A2185E /* Images.xcassets */; };
@@ -87,6 +88,7 @@
 		534F32761A9E7887001B7745 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		534F327E1A9E7F65001B7745 /* helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = helper; sourceTree = BUILT_PRODUCTS_DIR; };
 		534F32961A9E8866001B7745 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		536467FF1B7F419B00200D54 /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		53A3582A1A9E3B4400A2185E /* iSstp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSstp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A3582E1A9E3B4400A2185E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53A3582F1A9E3B4400A2185E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				53A3582F1A9E3B4400A2185E /* AppDelegate.swift */,
 				5347C40A1A9EA47200B77B5B /* WindowController.swift */,
 				53A358311A9E3B4400A2185E /* ViewController.swift */,
+				536467FF1B7F419B00200D54 /* OptionViewController.swift */,
 				534F32211A9E47F9001B7745 /* Account.swift */,
 				53A358331A9E3B4400A2185E /* Images.xcassets */,
 				53A358351A9E3B4400A2185E /* Main.storyboard */,
@@ -336,7 +339,7 @@
 				534F32861A9E7F86001B7745 /* helper in Resources */,
 				53013D631A9E89FC00C5D631 /* logo.png in Resources */,
 				53013D681A9E8B9D00C5D631 /* statusbar_icon.png in Resources */,
-				534F32781A9E7A10001B7745 /* Main.storyboard in Resources */,
+				53381B1D1B7ED29F00B03F41 /* Main.storyboard in Resources */,
 				532828DD1A9EB92B00137DB7 /* install.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53A358321A9E3B4400A2185E /* ViewController.swift in Sources */,
+				536468011B7F602F00200D54 /* OptionViewController.swift in Sources */,
 				5347C40B1A9EA47200B77B5B /* WindowController.swift in Sources */,
 				53A358301A9E3B4400A2185E /* AppDelegate.swift in Sources */,
 				534F32221A9E47F9001B7745 /* Account.swift in Sources */,
@@ -512,6 +516,10 @@
 					"$(PROJECT_DIR)/iSstp/sstp/1.0.9/lib",
 					"$(PROJECT_DIR)/iSstp/sstp-client/lib",
 				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -527,6 +535,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iSstp/sstp/1.0.9/lib",
 					"$(PROJECT_DIR)/iSstp/sstp-client/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -5,5 +5,3 @@ install_name_tool -change "/usr/local/lib/libevent-2.0.5.dylib" "@executable_pat
 install_name_tool -change "/usr/local/opt/openssl/lib/libssl.1.0.0.dylib" "@executable_path/../Frameworks/libssl.1.0.0.dylib" sstpc
 
 install_name_tool -change "/usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib" "@executable_path/../Frameworks/libcrypto.1.0.0.dylib" sstpc
-
-sudo chmod 4755 helper; sudo chown root helper
