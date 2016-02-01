@@ -294,6 +294,8 @@
 		53A358221A9E3B4400A2185E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = axot;
 				TargetAttributes = {

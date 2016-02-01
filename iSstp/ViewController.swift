@@ -39,10 +39,12 @@ class ViewController: NSViewController, NSTableViewDelegate {
   }
   
   func sstpStatus(){
-    let result: NSString = runCommand("/sbin/ifconfig ppp0 | grep 'inet' | awk '{ print $2}'")
+    let result: String = runCommand("/sbin/ifconfig ppp0 | grep 'inet' | awk '{ print $2}'")
     
-    if result.rangeOfString("ppp0").length == 0 && result.length != 0{
-      status.stringValue = "Connected to server, your ip is: " + (result as String)
+    if result.rangeOfString("ppp0") == nil && result.characters.count != 0{
+      status.stringValue = "Connected to server, your ip is: " + result
+    }else{
+      status.stringValue = "Not Connected!"
     }
   }
   
@@ -65,15 +67,15 @@ class ViewController: NSViewController, NSTableViewDelegate {
       
       task.launchPath = base! + "/helper"
       
-      task.arguments = []
-      task.arguments.append("start")
-      task.arguments.append(base! + "/sstpc")
-      task.arguments.append(ac.user!)
-      task.arguments.append(ac.pass!)
-      task.arguments.append(ac.server!)
-      task.arguments.append(ac.option!)
-      task.arguments.reverse()
-      
+      task.arguments = [
+        "start",
+        base! + "/sstpc " + ac.doesSkipCertWarn!,
+        ac.user!,
+        ac.pass!,
+        ac.server!,
+        ac.option!
+      ]
+
       let pipe = NSPipe()
       task.standardOutput = pipe
       task.launch()
@@ -81,9 +83,19 @@ class ViewController: NSViewController, NSTableViewDelegate {
       let data = pipe.fileHandleForReading.readDataToEndOfFile()
       let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
       
-      print(output)
+      if output.rangeOfString("server certificate failed") != nil{
+        if(self.statusTimer != nil)
+        {
+          self.statusTimer?.invalidate()
+          self.statusTimer = nil
+        }
+
+        self.status.stringValue = "Verification of server certificate failed"
+      }
+      
+      print(output, terminator: "")
     })
-    self.statusTimer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("sstpStatus"), userInfo: nil, repeats: true)
+    self.statusTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("sstpStatus"), userInfo: nil, repeats: true)
   }
   
   @IBAction func stop(sender: AnyObject) {
@@ -102,10 +114,8 @@ class ViewController: NSViewController, NSTableViewDelegate {
       
       task.launchPath = base! + "/helper"
       
-      task.arguments = []
-      task.arguments.append("stop")
-      task.arguments.reverse()
-      
+      task.arguments = ["stop"]
+
       let pipe = NSPipe()
       task.standardOutput = pipe
       task.launch()
@@ -113,7 +123,7 @@ class ViewController: NSViewController, NSTableViewDelegate {
       let data = pipe.fileHandleForReading.readDataToEndOfFile()
       let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
       
-      print(output)
+      print(output, terminator: "")
     })
     status.stringValue = "Not Connected!"
   }
@@ -124,15 +134,11 @@ class ViewController: NSViewController, NSTableViewDelegate {
     }
   }
   
-  func runCommand(cmd: NSString) -> NSString {
+  func runCommand(cmd: String) -> String {
     let task = NSTask()
     
     task.launchPath = "/bin/sh"
-    
-    task.arguments = []
-    task.arguments.append("-c")
-    task.arguments.append(cmd)
-    task.arguments.reverse()
+    task.arguments = ["-c", cmd]
     
     let pipe = NSPipe()
     task.standardOutput = pipe

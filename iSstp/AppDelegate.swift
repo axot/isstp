@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   
   func doScriptWithAdmin(inScript:String){
     let script = "do shell script \"/usr/bin/sudo /bin/sh \(inScript)\" with administrator privileges"
-    var appleScript = NSAppleScript(source: script)
+    let appleScript = NSAppleScript(source: script)
     var eventResult = appleScript!.executeAndReturnError(nil)
   }
 

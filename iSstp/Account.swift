@@ -14,6 +14,10 @@ class Account: NSObject {
   var user : String? = "Username"
   var pass : String? = "Password"
   var server : String? = "Server Name"
+  
+  var doesSkipCertWarn : String?
+  var doesSkipCertWarnDefault : String? = "--cert-warn"
+
   var option : String?
   var defaultOption : String? = "usepeerdns require-mschap-v2 refuse-eap noauth noipdefault defaultroute"
 
@@ -36,6 +40,12 @@ class Account: NSObject {
     
     if let ret = aDecoder.decodeObjectForKey("server") as? String {
       self.server = ret
+    }
+
+    if let ret = aDecoder.decodeObjectForKey("doesSkipCertWarn") as? String {
+      self.doesSkipCertWarn = ret
+    }else{
+      self.doesSkipCertWarn = doesSkipCertWarnDefault
     }
     
     if let ret = aDecoder.decodeObjectForKey("option") as? String {
@@ -60,6 +70,10 @@ class Account: NSObject {
 
     if let ret = self.server {
       aCoder.encodeObject(ret, forKey: "server")
+    }
+    
+    if let ret = self.doesSkipCertWarn {
+      aCoder.encodeObject(ret, forKey: "doesSkipCertWarn")
     }
     
     if let ret = self.option {
