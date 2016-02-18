@@ -10,18 +10,19 @@ import Foundation
 
 @objc(Account)
 class Account: NSObject {
-  var display : String? = "Display"
-  var user : String? = "Username"
-  var pass : String? = "Password"
-  var server : String? = "Server Name"
+  var display : String = "Display"
+  var user : String = "Username"
+  var pass : String = "Password"
+  var server : String = "Server Name"
   
   var doesSkipCertWarn : String?
-  var doesSkipCertWarnDefault : String? = "--cert-warn"
+  var doesSkipCertWarnDefault : String = "--cert-warn"
 
   var option : String?
-  var defaultOption : String? = "usepeerdns require-mschap-v2 refuse-eap noauth noipdefault defaultroute"
+  var defaultOption : String = "usepeerdns require-mschap-v2 refuse-eap noauth noipdefault defaultroute"
 
   override init() {
+    doesSkipCertWarn = doesSkipCertWarnDefault
     option = defaultOption
   }
   
@@ -56,28 +57,16 @@ class Account: NSObject {
   }
   
   func encodeWithCoder(aCoder: NSCoder) {
-    if let ret = self.display {
-      aCoder.encodeObject(ret, forKey: "display")
-    }
-    
-    if let ret = self.user {
-      aCoder.encodeObject(ret, forKey: "user")
-    }
+    aCoder.encodeObject(self.display, forKey: "display")
 
-    if let ret = self.pass {
-      aCoder.encodeObject(ret, forKey: "pass")
-    }
+    aCoder.encodeObject(self.user, forKey: "user")
 
-    if let ret = self.server {
-      aCoder.encodeObject(ret, forKey: "server")
-    }
+    aCoder.encodeObject(self.pass, forKey: "pass")
+
+    aCoder.encodeObject(self.server, forKey: "server")
     
-    if let ret = self.doesSkipCertWarn {
-      aCoder.encodeObject(ret, forKey: "doesSkipCertWarn")
-    }
+    aCoder.encodeObject(self.doesSkipCertWarn, forKey: "doesSkipCertWarn")
     
-    if let ret = self.option {
-      aCoder.encodeObject(ret, forKey: "option")
-    }
+    aCoder.encodeObject(self.option, forKey: "option")
   }
 }

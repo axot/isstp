@@ -44,7 +44,7 @@ class OptionViewController: NSViewController, NSTableViewDelegate {
   }
   
   @IBAction func resetBtnPressed(sender: AnyObject) {
-    optionText.stringValue = account!.defaultOption!
+    optionText.stringValue = account!.defaultOption
     doesSkipCertWarn.state = NSOnState
   }  
 }

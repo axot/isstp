@@ -59,7 +59,7 @@ class ViewController: NSViewController, NSTableViewDelegate {
     let qualityOfServiceClass = QOS_CLASS_BACKGROUND
     let backgroundQueue = dispatch_get_global_queue(qualityOfServiceClass, 0)
     
-    status.stringValue = "Try to connect " + ac.server! + "..."
+    status.stringValue = "Try to connect " + ac.server + "..."
       
     dispatch_async(backgroundQueue, {
       let task = NSTask()
@@ -70,9 +70,9 @@ class ViewController: NSViewController, NSTableViewDelegate {
       task.arguments = [
         "start",
         base! + "/sstpc " + ac.doesSkipCertWarn!,
-        ac.user!,
-        ac.pass!,
-        ac.server!,
+        ac.user,
+        "'" + ac.pass.stringByReplacingOccurrencesOfString("'", withString: "'\"'\"'") + "'",
+        ac.server,
         ac.option!
       ]
 
