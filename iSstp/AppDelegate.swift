@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   override func awakeFromNib()
   {
-    statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(20)
+    statusItem = NSStatusBar.system().statusItem(withLength: 20)
     let image: NSImage = NSImage(named: "statusbar_icon")!
     
     statusItem?.title = "Status Menu"
@@ -24,30 +24,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     statusItem?.menu = myMenu
   }
   
-  func doScriptWithAdmin(inScript:String){
+  func doScriptWithAdmin(_ inScript:String){
     let script = "do shell script \"/usr/bin/sudo /bin/sh \(inScript)\" with administrator privileges"
     let appleScript = NSAppleScript(source: script)
     var eventResult = appleScript!.executeAndReturnError(nil)
   }
 
-  func applicationDidFinishLaunching(aNotification: NSNotification) {
-    let base = NSBundle.mainBundle().resourcePath
-    if NSFileManager.defaultManager().fileExistsAtPath(base! + "/installed") == false{
+  func applicationDidFinishLaunching(_ aNotification: Notification) {
+    let base = Bundle.main.resourcePath
+    if FileManager.default.fileExists(atPath: base! + "/installed") == false{
       doScriptWithAdmin(base! + "/install.sh")
     }
   }
 
-  func applicationWillTerminate(aNotification: NSNotification) {
+  func applicationWillTerminate(_ aNotification: Notification) {
   }
 
-  @IBAction func open(sender: NSMenuItem) {
-    NSApplication.sharedApplication().unhide(self)
-    NSApp.activateIgnoringOtherApps(true)
-    NSNotificationCenter.defaultCenter().postNotificationName("Window Open", object: nil)
+  @IBAction func open(_ sender: NSMenuItem) {
+    NSApplication.shared().unhide(self)
+    NSApp.activate(ignoringOtherApps: true)
+    NotificationCenter.default.post(name: Notification.Name(rawValue: "Window Open"), object: nil)
   }
   
-  @IBAction func quit(sender: NSMenuItem) {
-    NSNotificationCenter.defaultCenter().postNotificationName("All Stop", object: nil)
-    NSApplication.sharedApplication().terminate(self)
+  @IBAction func quit(_ sender: NSMenuItem) {
+    NotificationCenter.default.post(name: Notification.Name(rawValue: "All Stop"), object: nil)
+    NSApplication.shared().terminate(self)
   }
 }

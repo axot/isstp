@@ -27,46 +27,46 @@ class Account: NSObject {
   }
   
   required init(coder aDecoder: NSCoder) {
-    if let ret = aDecoder.decodeObjectForKey("display") as? String {
+    if let ret = aDecoder.decodeObject(forKey: "display") as? String {
       self.display = ret
     }
     
-    if let ret = aDecoder.decodeObjectForKey("user") as? String {
+    if let ret = aDecoder.decodeObject(forKey: "user") as? String {
       self.user = ret
     }
     
-    if let ret = aDecoder.decodeObjectForKey("pass") as? String {
+    if let ret = aDecoder.decodeObject(forKey: "pass") as? String {
       self.pass = ret
     }
     
-    if let ret = aDecoder.decodeObjectForKey("server") as? String {
+    if let ret = aDecoder.decodeObject(forKey: "server") as? String {
       self.server = ret
     }
 
-    if let ret = aDecoder.decodeObjectForKey("doesSkipCertWarn") as? String {
+    if let ret = aDecoder.decodeObject(forKey: "doesSkipCertWarn") as? String {
       self.doesSkipCertWarn = ret
     }else{
       self.doesSkipCertWarn = doesSkipCertWarnDefault
     }
     
-    if let ret = aDecoder.decodeObjectForKey("option") as? String {
+    if let ret = aDecoder.decodeObject(forKey: "option") as? String {
       self.option = ret
     }else{
       self.option = defaultOption
     }
   }
   
-  func encodeWithCoder(aCoder: NSCoder) {
-    aCoder.encodeObject(self.display, forKey: "display")
+  func encodeWithCoder(_ aCoder: NSCoder) {
+    aCoder.encode(self.display, forKey: "display")
 
-    aCoder.encodeObject(self.user, forKey: "user")
+    aCoder.encode(self.user, forKey: "user")
 
-    aCoder.encodeObject(self.pass, forKey: "pass")
+    aCoder.encode(self.pass, forKey: "pass")
 
-    aCoder.encodeObject(self.server, forKey: "server")
+    aCoder.encode(self.server, forKey: "server")
     
-    aCoder.encodeObject(self.doesSkipCertWarn, forKey: "doesSkipCertWarn")
+    aCoder.encode(self.doesSkipCertWarn, forKey: "doesSkipCertWarn")
     
-    aCoder.encodeObject(self.option, forKey: "option")
+    aCoder.encode(self.option, forKey: "option")
   }
 }

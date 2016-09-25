@@ -26,7 +26,6 @@
 		53A358301A9E3B4400A2185E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A3582F1A9E3B4400A2185E /* AppDelegate.swift */; };
 		53A358321A9E3B4400A2185E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A358311A9E3B4400A2185E /* ViewController.swift */; };
 		53A358341A9E3B4400A2185E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A358331A9E3B4400A2185E /* Images.xcassets */; };
-		53A358431A9E3B4400A2185E /* iSstpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A358421A9E3B4400A2185E /* iSstpTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +35,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 534F327D1A9E7F65001B7745;
 			remoteInfo = helper;
-		};
-		53A3583D1A9E3B4400A2185E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53A358221A9E3B4400A2185E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53A358291A9E3B4400A2185E;
-			remoteInfo = iSstp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -95,7 +87,6 @@
 		53A358311A9E3B4400A2185E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53A358331A9E3B4400A2185E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		53A358361A9E3B4400A2185E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		53A3583C1A9E3B4400A2185E /* iSstpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSstpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A358411A9E3B4400A2185E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53A358421A9E3B4400A2185E /* iSstpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSstpTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,13 +104,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				534F32971A9E8866001B7745 /* AppKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53A358391A9E3B4400A2185E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				53A3582A1A9E3B4400A2185E /* iSstp.app */,
-				53A3583C1A9E3B4400A2185E /* iSstpTests.xctest */,
 				534F327E1A9E7F65001B7745 /* helper */,
 			);
 			name = Products;
@@ -270,24 +253,6 @@
 			productReference = 53A3582A1A9E3B4400A2185E /* iSstp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		53A3583B1A9E3B4400A2185E /* iSstpTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 53A358491A9E3B4400A2185E /* Build configuration list for PBXNativeTarget "iSstpTests" */;
-			buildPhases = (
-				53A358381A9E3B4400A2185E /* Sources */,
-				53A358391A9E3B4400A2185E /* Frameworks */,
-				53A3583A1A9E3B4400A2185E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				53A3583E1A9E3B4400A2185E /* PBXTargetDependency */,
-			);
-			name = iSstpTests;
-			productName = iSstpTests;
-			productReference = 53A3583C1A9E3B4400A2185E /* iSstpTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -304,10 +269,9 @@
 					};
 					53A358291A9E3B4400A2185E = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					53A3583B1A9E3B4400A2185E = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 53A358291A9E3B4400A2185E;
+						DevelopmentTeam = HQ5QBPKEYU;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -326,7 +290,6 @@
 			targets = (
 				53A358291A9E3B4400A2185E /* iSstp */,
 				534F327D1A9E7F65001B7745 /* helper */,
-				53A3583B1A9E3B4400A2185E /* iSstpTests */,
 			);
 		};
 /* End PBXProject section */
@@ -343,13 +306,6 @@
 				53013D681A9E8B9D00C5D631 /* statusbar_icon.png in Resources */,
 				53381B1D1B7ED29F00B03F41 /* Main.storyboard in Resources */,
 				532828DD1A9EB92B00137DB7 /* install.sh in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53A3583A1A9E3B4400A2185E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,14 +332,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53A358381A9E3B4400A2185E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				53A358431A9E3B4400A2185E /* iSstpTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -391,11 +339,6 @@
 			isa = PBXTargetDependency;
 			target = 534F327D1A9E7F65001B7745 /* helper */;
 			targetProxy = 534F32981A9E88A0001B7745 /* PBXContainerItemProxy */;
-		};
-		53A3583E1A9E3B4400A2185E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 53A358291A9E3B4400A2185E /* iSstp */;
-			targetProxy = 53A3583D1A9E3B4400A2185E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -510,7 +453,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HQ5QBPKEYU;
 				INFOPLIST_FILE = iSstp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -523,6 +468,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -530,7 +476,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HQ5QBPKEYU;
 				INFOPLIST_FILE = iSstp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -543,42 +491,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		53A3584A1A9E3B4400A2185E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = iSstpTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iSstp.app/Contents/MacOS/iSstp";
-			};
-			name = Debug;
-		};
-		53A3584B1A9E3B4400A2185E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = iSstpTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iSstp.app/Contents/MacOS/iSstp";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -608,15 +521,6 @@
 			buildConfigurations = (
 				53A358471A9E3B4400A2185E /* Debug */,
 				53A358481A9E3B4400A2185E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		53A358491A9E3B4400A2185E /* Build configuration list for PBXNativeTarget "iSstpTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				53A3584A1A9E3B4400A2185E /* Debug */,
-				53A3584B1A9E3B4400A2185E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

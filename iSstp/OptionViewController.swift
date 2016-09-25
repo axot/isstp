@@ -9,6 +9,26 @@
 import Cocoa
 import AppKit
 import Foundation
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class OptionViewController: NSViewController, NSTableViewDelegate {
   var account : Account?
@@ -29,7 +49,7 @@ class OptionViewController: NSViewController, NSTableViewDelegate {
     }
   }
   
-  @IBAction func saveBtnPressed(sender: AnyObject) {
+  @IBAction func saveBtnPressed(_ sender: AnyObject) {
     account?.option = optionText.stringValue
     
     if (doesSkipCertWarn.state == NSOffState){
@@ -40,10 +60,10 @@ class OptionViewController: NSViewController, NSTableViewDelegate {
     }
     
     superViewController!.saveConfig(self)
-    dismissController(self)
+    dismiss(self)
   }
   
-  @IBAction func resetBtnPressed(sender: AnyObject) {
+  @IBAction func resetBtnPressed(_ sender: AnyObject) {
     optionText.stringValue = account!.defaultOption
     doesSkipCertWarn.state = NSOnState
   }  
