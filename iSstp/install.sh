@@ -9,6 +9,6 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 cd $DIR
 
-sudo chmod 4755 helper
 sudo chown root helper
+sudo chmod 4755 helper
 sudo touch installed

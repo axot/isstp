@@ -1,0 +1,16 @@
+#!/bin/bash
+
+[[ $# -le 1 ]] && exit -1
+
+whoami
+cmd=$1
+if [[ "$cmd" == "start" ]]; then
+  target="$2"
+  user="$3"
+  pass="$4"
+  server="$5"
+  opt="$6"
+  "$target --user $user --password $pass $server $opt"
+elif [[ "$cmd" == "stop" ]]; then
+  killall sstpc helper
+fi
