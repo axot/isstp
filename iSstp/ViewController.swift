@@ -67,9 +67,14 @@ class ViewController: NSViewController, NSTableViewDelegate {
 
             task.launchPath = base! + "/helper"
 
+            var sstpcPath = base! + "/sstpc"
+            if self.ud.bool(forKey: "useExtSstpc") {
+                sstpcPath = self.ud.string(forKey: "sstpcPath")!
+            }
+
             task.arguments = [
                 "start",
-                base! + "/sstpc " + ac.doesSkipCertWarn!,
+                sstpcPath + " " + ac.doesSkipCertWarn!,
                 ac.user,
                 "'" + ac.pass.replacingOccurrences(of: "'", with: "'\"'\"'") + "'",
                 ac.server,
