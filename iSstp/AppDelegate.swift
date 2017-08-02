@@ -10,44 +10,44 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-  @IBOutlet dynamic var myMenu: NSMenu!
-  var statusItem: NSStatusItem?
+    @IBOutlet dynamic var myMenu: NSMenu!
+    var statusItem: NSStatusItem?
 
-  override func awakeFromNib()
-  {
-    statusItem = NSStatusBar.system().statusItem(withLength: 20)
-    let image: NSImage = NSImage(named: "statusbar_icon")!
-    
-    statusItem?.title = "Status Menu"
-    statusItem?.image = image
-    statusItem?.highlightMode = true
-    statusItem?.menu = myMenu
-  }
-  
-  func doScriptWithAdmin(_ inScript:String){
-    let script = "do shell script \"/usr/bin/sudo /bin/sh \(inScript)\" with administrator privileges"
-    let appleScript = NSAppleScript(source: script)
-    var eventResult = appleScript!.executeAndReturnError(nil)
-  }
+    override func awakeFromNib()
+    {
+        statusItem = NSStatusBar.system().statusItem(withLength: 20)
+        let image: NSImage = NSImage(named: "statusbar_icon")!
 
-  func applicationDidFinishLaunching(_ aNotification: Notification) {
-    let base = Bundle.main.resourcePath
-    if FileManager.default.fileExists(atPath: base! + "/installed") == false{
-      doScriptWithAdmin(base! + "/install.sh")
+        statusItem?.title = "Status Menu"
+        statusItem?.image = image
+        statusItem?.highlightMode = true
+        statusItem?.menu = myMenu
     }
-  }
 
-  func applicationWillTerminate(_ aNotification: Notification) {
-  }
+    func doScriptWithAdmin(_ inScript:String) {
+        let script = "do shell script \"/usr/bin/sudo /bin/sh \(inScript)\" with administrator privileges"
+        let appleScript = NSAppleScript(source: script)
+        appleScript!.executeAndReturnError(nil)
+    }
 
-  @IBAction func open(_ sender: NSMenuItem) {
-    NSApplication.shared().unhide(self)
-    NSApp.activate(ignoringOtherApps: true)
-    NotificationCenter.default.post(name: Notification.Name(rawValue: "Window Open"), object: nil)
-  }
-  
-  @IBAction func quit(_ sender: NSMenuItem) {
-    NotificationCenter.default.post(name: Notification.Name(rawValue: "All Stop"), object: nil)
-    NSApplication.shared().terminate(self)
-  }
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let base = Bundle.main.resourcePath
+        if FileManager.default.fileExists(atPath: base! + "/installed") == false {
+            doScriptWithAdmin(base! + "/install.sh")
+        }
+    }
+
+    func applicationWillTerminate(_ aNotification: Notification) {
+    }
+
+    @IBAction func open(_ sender: NSMenuItem) {
+        NSApplication.shared().unhide(self)
+        NSApp.activate(ignoringOtherApps: true)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "Window Open"), object: nil)
+    }
+
+    @IBAction func quit(_ sender: NSMenuItem) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "All Stop"), object: nil)
+        NSApplication.shared().terminate(self)
+    }
 }
