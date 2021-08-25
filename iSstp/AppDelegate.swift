@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     override func awakeFromNib()
     {
-        statusItem = NSStatusBar.system().statusItem(withLength: 20)
+        statusItem = NSStatusBar.system.statusItem(withLength: 20)
         let image: NSImage = NSImage(named: "statusbar_icon")!
 
         statusItem?.title = "Status Menu"
@@ -48,13 +48,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func open(_ sender: NSMenuItem) {
-        NSApplication.shared().unhide(self)
+        NSApplication.shared.unhide(self)
         NSApp.activate(ignoringOtherApps: true)
         NotificationCenter.default.post(name: Notification.Name(rawValue: "Window Open"), object: nil)
     }
 
     @IBAction func quit(_ sender: NSMenuItem) {
         NotificationCenter.default.post(name: Notification.Name(rawValue: "All Stop"), object: nil)
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
 }

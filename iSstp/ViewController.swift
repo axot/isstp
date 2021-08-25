@@ -19,7 +19,7 @@ class ViewController: NSViewController, NSTableViewDelegate {
     @IBOutlet weak var editBtn: NSButton!
     @IBOutlet weak var connectBtn: NSButton!
 
-    dynamic var accounts: [Account] = []
+    @objc dynamic var accounts: [Account] = []
     let ud = UserDefaults.standard
     var statusTimer: Timer?
 
@@ -38,10 +38,10 @@ class ViewController: NSViewController, NSTableViewDelegate {
         tableViewSelectionDidChange(notif)
     }
 
-    func sstpStatus() {
+    @objc func sstpStatus() {
         let result: String = runCommand("/sbin/ifconfig ppp0 | grep 'inet' | awk '{ print $2}'")
 
-        if result.range(of: "ppp0") == nil && result.characters.count != 0 {
+        if result.range(of: "ppp0") == nil && result.count != 0 {
             status.stringValue = "Connected to server, your ip is: " + result
         } else {
             status.stringValue = "Not Connected!"

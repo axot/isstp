@@ -11,11 +11,11 @@ import Cocoa
 class WindowController: NSWindowController {
 
     override func awakeFromNib() {
-        window!.collectionBehavior = NSWindowCollectionBehavior.canJoinAllSpaces
+        window!.collectionBehavior = NSWindow.CollectionBehavior.canJoinAllSpaces
         NotificationCenter.default.addObserver(self, selector: #selector(WindowController.reopen), name: NSNotification.Name(rawValue: "Window Open"), object: nil)
     }
 
-    func reopen() {
+    @objc func reopen() {
         window!.orderFront(self)
         window!.makeKeyAndOrderFront(self)
     }

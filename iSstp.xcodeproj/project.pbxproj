@@ -15,17 +15,19 @@
 		534BC1A91A9EB42F00D34B85 /* helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 5347C4131A9EAA1D00B77B5B /* helper.c */; };
 		534F32221A9E47F9001B7745 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534F32211A9E47F9001B7745 /* Account.swift */; };
 		534F325C1A9E6A9D001B7745 /* sstpc in Resources */ = {isa = PBXBuildFile; fileRef = 534F324E1A9E6A9D001B7745 /* sstpc */; };
-		534F32711A9E74E8001B7745 /* libcrypto.1.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32611A9E6C50001B7745 /* libcrypto.1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		534F32721A9E74EA001B7745 /* libevent-2.0.5.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32621A9E6C50001B7745 /* libevent-2.0.5.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		534F32731A9E74EC001B7745 /* libssl.1.0.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32631A9E6C50001B7745 /* libssl.1.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		534F32741A9E74F0001B7745 /* libz.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32641A9E6C50001B7745 /* libz.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		534F32751A9E74F3001B7745 /* libsstp_api-0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 534F32471A9E6A9D001B7745 /* libsstp_api-0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		534F32861A9E7F86001B7745 /* helper in Resources */ = {isa = PBXBuildFile; fileRef = 534F327E1A9E7F65001B7745 /* helper */; };
-		534F32971A9E8866001B7745 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534F32961A9E8866001B7745 /* AppKit.framework */; };
 		536468011B7F602F00200D54 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536467FF1B7F419B00200D54 /* OptionViewController.swift */; };
 		53A358301A9E3B4400A2185E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A3582F1A9E3B4400A2185E /* AppDelegate.swift */; };
 		53A358321A9E3B4400A2185E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A358311A9E3B4400A2185E /* ViewController.swift */; };
 		53A358341A9E3B4400A2185E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A358331A9E3B4400A2185E /* Images.xcassets */; };
+		53CDF86026D6EE7E00D66A3A /* libcrypto.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CDF85D26D6EE7D00D66A3A /* libcrypto.1.1.dylib */; };
+		53CDF86126D6EE7E00D66A3A /* libevent-2.1.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CDF85E26D6EE7D00D66A3A /* libevent-2.1.7.dylib */; };
+		53CDF86226D6EE7E00D66A3A /* libssl.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 53CDF85F26D6EE7D00D66A3A /* libssl.1.1.dylib */; };
+		53CDF86326D6EE8700D66A3A /* libcrypto.1.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53CDF85D26D6EE7D00D66A3A /* libcrypto.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		53CDF86426D6EE8800D66A3A /* libevent-2.1.7.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53CDF85E26D6EE7D00D66A3A /* libevent-2.1.7.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		53CDF86526D6EE8900D66A3A /* libssl.1.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53CDF85F26D6EE7D00D66A3A /* libssl.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		53CDF86626D6EE8E00D66A3A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534F32961A9E8866001B7745 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +47,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				534F32711A9E74E8001B7745 /* libcrypto.1.0.0.dylib in CopyFiles */,
-				534F32721A9E74EA001B7745 /* libevent-2.0.5.dylib in CopyFiles */,
-				534F32731A9E74EC001B7745 /* libssl.1.0.0.dylib in CopyFiles */,
-				534F32741A9E74F0001B7745 /* libz.1.dylib in CopyFiles */,
+				53CDF86426D6EE8800D66A3A /* libevent-2.1.7.dylib in CopyFiles */,
+				53CDF86526D6EE8900D66A3A /* libssl.1.1.dylib in CopyFiles */,
 				534F32751A9E74F3001B7745 /* libsstp_api-0.dylib in CopyFiles */,
+				53CDF86326D6EE8700D66A3A /* libcrypto.1.1.dylib in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,10 +74,6 @@
 		534F32211A9E47F9001B7745 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		534F32471A9E6A9D001B7745 /* libsstp_api-0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libsstp_api-0.dylib"; sourceTree = "<group>"; };
 		534F324E1A9E6A9D001B7745 /* sstpc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sstpc; sourceTree = "<group>"; };
-		534F32611A9E6C50001B7745 /* libcrypto.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.1.0.0.dylib; sourceTree = "<group>"; };
-		534F32621A9E6C50001B7745 /* libevent-2.0.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libevent-2.0.5.dylib"; sourceTree = "<group>"; };
-		534F32631A9E6C50001B7745 /* libssl.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.1.0.0.dylib; sourceTree = "<group>"; };
-		534F32641A9E6C50001B7745 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libz.1.dylib; sourceTree = "<group>"; };
 		534F32761A9E7887001B7745 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		534F327E1A9E7F65001B7745 /* helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = helper; sourceTree = BUILT_PRODUCTS_DIR; };
 		534F32961A9E8866001B7745 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -89,6 +86,9 @@
 		53A358361A9E3B4400A2185E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53A358411A9E3B4400A2185E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53A358421A9E3B4400A2185E /* iSstpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSstpTests.swift; sourceTree = "<group>"; };
+		53CDF85D26D6EE7D00D66A3A /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.1.1.dylib; sourceTree = "<group>"; };
+		53CDF85E26D6EE7D00D66A3A /* libevent-2.1.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = "libevent-2.1.7.dylib"; sourceTree = "<group>"; };
+		53CDF85F26D6EE7D00D66A3A /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.1.1.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				534F32971A9E8866001B7745 /* AppKit.framework in Frameworks */,
+				53CDF86126D6EE7E00D66A3A /* libevent-2.1.7.dylib in Frameworks */,
+				53CDF86626D6EE8E00D66A3A /* AppKit.framework in Frameworks */,
+				53CDF86226D6EE7E00D66A3A /* libssl.1.1.dylib in Frameworks */,
+				53CDF86026D6EE7E00D66A3A /* libcrypto.1.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,10 +127,9 @@
 		534F32461A9E6A9D001B7745 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				534F32611A9E6C50001B7745 /* libcrypto.1.0.0.dylib */,
-				534F32621A9E6C50001B7745 /* libevent-2.0.5.dylib */,
-				534F32631A9E6C50001B7745 /* libssl.1.0.0.dylib */,
-				534F32641A9E6C50001B7745 /* libz.1.dylib */,
+				53CDF85D26D6EE7D00D66A3A /* libcrypto.1.1.dylib */,
+				53CDF85E26D6EE7D00D66A3A /* libevent-2.1.7.dylib */,
+				53CDF85F26D6EE7D00D66A3A /* libssl.1.1.dylib */,
 				534F32471A9E6A9D001B7745 /* libsstp_api-0.dylib */,
 			);
 			name = lib;
@@ -261,7 +263,7 @@
 			attributes = {
 				LastSwiftMigration = 0720;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = axot;
 				TargetAttributes = {
 					534F327D1A9E7F65001B7745 = {
@@ -277,7 +279,7 @@
 			};
 			buildConfigurationList = 53A358251A9E3B4400A2185E /* Build configuration list for PBXProject "iSstp" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -357,6 +359,7 @@
 		534F32831A9E7F65001B7745 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -368,7 +371,9 @@
 		534F32841A9E7F65001B7745 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O2";
 			};
 			name = Release;
 		};
@@ -376,24 +381,38 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -418,17 +437,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -437,6 +468,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -446,6 +478,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -453,8 +486,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 20210825;
 				DEVELOPMENT_TEAM = HQ5QBPKEYU;
 				INFOPLIST_FILE = iSstp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -463,12 +497,14 @@
 					"$(PROJECT_DIR)/iSstp/sstp/1.0.9/lib",
 					"$(PROJECT_DIR)/iSstp/sstp-client/lib",
 				);
+				MARKETING_VERSION = 1.4;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.axot.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -476,8 +512,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 20210825;
 				DEVELOPMENT_TEAM = HQ5QBPKEYU;
 				INFOPLIST_FILE = iSstp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -486,12 +523,14 @@
 					"$(PROJECT_DIR)/iSstp/sstp/1.0.9/lib",
 					"$(PROJECT_DIR)/iSstp/sstp-client/lib",
 				);
+				MARKETING_VERSION = 1.4;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.axot.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

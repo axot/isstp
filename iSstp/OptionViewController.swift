@@ -41,17 +41,17 @@ class OptionViewController: NSViewController, NSTableViewDelegate {
         preferredContentSize = self.view.frame.size
         optionText.stringValue = account!.option!
 
-        if (account?.doesSkipCertWarn?.characters.count > 0) {
-            doesSkipCertWarn.state = NSOnState
+        if (account?.doesSkipCertWarn?.count > 0) {
+            doesSkipCertWarn.state = NSControl.StateValue.on
         } else {
-            doesSkipCertWarn.state = NSOffState
+            doesSkipCertWarn.state = NSControl.StateValue.off
         }
     }
 
     @IBAction func saveBtnPressed(_ sender: AnyObject) {
         account?.option = optionText.stringValue
 
-        if (doesSkipCertWarn.state == NSOffState) {
+        if (doesSkipCertWarn.state == NSControl.StateValue.off) {
             account?.doesSkipCertWarn = ""
         } else {
             account?.doesSkipCertWarn = account!.doesSkipCertWarnDefault
@@ -63,6 +63,6 @@ class OptionViewController: NSViewController, NSTableViewDelegate {
 
     @IBAction func resetBtnPressed(_ sender: AnyObject) {
         optionText.stringValue = account!.defaultOption
-        doesSkipCertWarn.state = NSOnState
+        doesSkipCertWarn.state = NSControl.StateValue.on
     }
 }

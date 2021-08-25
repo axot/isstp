@@ -9,17 +9,17 @@
 import Foundation
 
 @objc(Account)
-class Account: NSObject {
-    var display: String = "Display"
-    var user: String = "Username"
-    var pass: String = "Password"
-    var server: String = "Server Name"
+class Account: NSObject, NSCoding {
+    @objc dynamic var display: String = "Display"
+    @objc dynamic var user: String = "Username"
+    @objc dynamic var pass: String = "Password"
+    @objc dynamic var server: String = "Server Name"
 
-    var doesSkipCertWarn: String?
-    var doesSkipCertWarnDefault: String = "--cert-warn"
+    @objc dynamic var doesSkipCertWarn: String?
+    @objc dynamic var doesSkipCertWarnDefault: String = "--cert-warn"
 
-    var option: String?
-    var defaultOption: String = "usepeerdns require-mschap-v2 refuse-eap noauth noipdefault defaultroute"
+    @objc dynamic var option: String?
+    @objc dynamic var defaultOption: String = "usepeerdns require-mschap-v2 refuse-eap noauth noipdefault defaultroute"
 
     override init() {
         doesSkipCertWarn = doesSkipCertWarnDefault
@@ -56,7 +56,7 @@ class Account: NSObject {
         }
     }
 
-    func encodeWithCoder(_ aCoder: NSCoder) {
+    func encode(with aCoder: NSCoder) {
         aCoder.encode(self.display, forKey: "display")
 
         aCoder.encode(self.user, forKey: "user")
