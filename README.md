@@ -4,7 +4,7 @@
 
 This project provide a [sstp-client](http://sstp-client.sourceforge.net) GUI for Mac.
 
-<img src="https://github.com/axot/isstp/raw/master/img/ui.png" width="100">
+<img src="https://github.com/axot/isstp/raw/master/img/ui.png" width="771">
 
 ----
 
