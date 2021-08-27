@@ -18,12 +18,17 @@ This project provide a [sstp-client](http://sstp-client.sourceforge.net) GUI for
 
 ## CHANGELOG
 
-* 2016.10.04 v1.3
-fixed: Sierra support
+----
 
-* 2015.08.15 v1.1
+## v1.4 2021.08.27
+new: Add M1 silicon support.
+
+## v1.3 2016.10.04
+new: Add Sierra support
+
+## v1.1 2015.08.15
 new feature: custom sstpc option support
 
-* 2015.08.12
+## v1.0 2015.08.12
 fixed: add refuse-eap support
 
