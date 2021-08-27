@@ -2,9 +2,19 @@
 
 ----
 
-This project provide a [sstp-client](http://sstp-client.sourceforge.net) GUI for Mac
+This project provide a [sstp-client](http://sstp-client.sourceforge.net) GUI for Mac.
+
+<img src="https://github.com/axot/isstp/raw/master/img/ui.png" width="100">
 
 ----
+
+## Features
+
+1. Super easy to use.
+2. A standalone version without any external packages dependencies.
+3. Fixible sstp-client options.
+3. Support to use external sstp-client.
+4. Both Intel and Arm chip support.
 
 ## CHANGELOG
 
