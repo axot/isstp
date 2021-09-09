@@ -1,0 +1,13 @@
+--- src/Makefile.am.orig	2021-09-09 21:47:15.000000000 +0900
++++ src/Makefile.am	2021-09-09 21:48:15.000000000 +0900
+@@ -3,7 +3,9 @@
+ sstpc_LDADD	    =       \
+     libsstp-log/libsstp_log.la \
+     libsstp-api/libsstp_api.la \
+-    libsstp-compat/libsstp_compat.la
++    libsstp-compat/libsstp_compat.la \
++    $(OPENSSL_STATIC_LIBS) \
++    $(LIBEVENT_STATIC_LIBS)
+ 
+ utest_task_SOURCES  = sstp-task.c
+ utest_task_CFLAGS   = -I$(top_srcdir)/include -D__SSTP_UNIT_TEST_TASK=1

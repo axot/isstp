@@ -1,0 +1,9 @@
+--- src/libsstp-api/Makefile.am.orig	2021-09-08 22:47:42.000000000 +0900
++++ src/libsstp-api/Makefile.am	2021-09-08 22:47:53.000000000 +0900
+@@ -1,5 +1,5 @@
+ lib_LTLIBRARIES        = libsstp_api.la
+-libsstp_api_la_LDFLAGS = -export-dynamic -release 0
++libsstp_api_la_LDFLAGS = -static
+ libsstp_api_la_CFLAGS  = -I$(top_srcdir)/include
+ libsstp_api_la_SOURCES = \
+     sstp-api.c
