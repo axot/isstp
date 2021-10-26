@@ -65,3 +65,8 @@ DerivedData/
 ### Custom ###
 iSstp/helper
 iSstp/helper.dSYM
+iSstp/sstp-client/x86_64
+iSstp/sstp-client/arm64
+iSstp/sstp-client/out
+sstpc
+
